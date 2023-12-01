@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "advent-of-code"
+version = "0.1.0"
+description = "Solutions for advent of code 2023"
+authors = ["jessica0greene <jessica0greene@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "advent-of-code"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.4.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
