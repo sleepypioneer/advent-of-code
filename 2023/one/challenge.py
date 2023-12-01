@@ -1,4 +1,4 @@
-def get_puzzle_input(calibration_block):
+def get_puzzle_input_challenge_one(calibration_block):
     """
     returns the puzzle input, which is the sum of the line calibration values
 

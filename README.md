@@ -16,6 +16,6 @@ poetry install
 example for day 1
 
 ```bash
-poetry run python -m one.main
+poetry run python -m 2023.one.main
 ```
 
