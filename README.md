@@ -19,3 +19,9 @@ example for day 1
 poetry run python -m 2023.one.main
 ```
 
+### Run tests
+
+```bash
+poetry run pytest
+```
+
