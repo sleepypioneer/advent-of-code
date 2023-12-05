@@ -7,9 +7,7 @@ def main():
     puzzle_input_one = get_puzzle_input_challenge(calibration_block)
     print(f"Puzzle solution part 1: {puzzle_input_one}")
 
-    puzzle_input_two = get_puzzle_input_challenge(
-        calibration_block, include_char_digits=True
-    )
+    puzzle_input_two = get_puzzle_input_challenge(calibration_block, include_char_digits=True)
     print(f"Puzzle solution part 2: {puzzle_input_two}")
 
 

@@ -1,0 +1,40 @@
+name: lint
+
+on: [push]
+
+jobs:
+  python-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - if: ${{ matrix.arch == 'arm64' }}
+        uses: deadsnakes/action@v2.1.1
+        with:
+          python-version: '3.11'
+      - if: ${{ matrix.arch == 'amd64' }}
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install pycodestyle black
+      - name: Run pycodestyle
+        run: |
+          pycodestyle --max-line-length=100 .
+      - name: Run black formatter
+        run: |
+          black --diff --check --line-length 100 . 
+  python-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: deadsnakes/action@v2.1.1
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          pip install poetry
+          poetry install
+      - name: Run tests
+        run: |
+          poetry run pytest

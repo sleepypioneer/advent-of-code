@@ -15,9 +15,7 @@ def test_get_puzzle_input_challenge_one():
 
 
 def test_get_line_calibration_value():
-    for line, value in zip(
-        ["1abc2", "pqr3stu8vwx", "a1b2c3d4e5f", "treb7uchet"], [12, 38, 15, 77]
-    ):
+    for line, value in zip(["1abc2", "pqr3stu8vwx", "a1b2c3d4e5f", "treb7uchet"], [12, 38, 15, 77]):
         assert get_line_calibration_value(line) == value
 
 

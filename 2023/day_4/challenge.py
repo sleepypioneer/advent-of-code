@@ -4,16 +4,8 @@ def matches_on_card(winning_numbers: list[int], card_numbers: list[int]) -> int:
 
 def split_card(card: str) -> (list[int], list[int]):
     winning_numbers, card_numbers = (
-        [
-            value
-            for value in card.split(":")[1].split("|")[0].split(" ")
-            if len(value) > 0
-        ],
-        [
-            value
-            for value in card.split(":")[1].split("|")[1].split(" ")
-            if len(value) > 0
-        ],
+        [value for value in card.split(":")[1].split("|")[0].split(" ") if len(value) > 0],
+        [value for value in card.split(":")[1].split("|")[1].split(" ") if len(value) > 0],
     )
     return winning_numbers, card_numbers
 

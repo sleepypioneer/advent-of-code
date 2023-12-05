@@ -1,7 +1,7 @@
-################# GAME MAP ######################
-# create a game map from the game text string   #
-# by splitting the string into games and rounds #
-#################################################
+# ################ GAME MAP ##################### #
+# create a game map from the game text string     #
+# by splitting the string into games and rounds   #
+# ############################################### #
 
 
 def get_games_map(game_text: str) -> dict:
@@ -61,11 +61,11 @@ def get_round_map(round_text: str) -> dict:
     return round_map
 
 
-################# FIND POSSIBLE GAMES ######################
+# ############### FIND POSSIBLE GAMES #################### #
 # Determine if games are possible with the available cubes #
 # For a game to be possible, all rounds must be possible   #
 # Take the number of the game as it's id ie game_1 = 1     #
-############################################################
+# ######################################################## #
 
 
 def possible_game(game: list[map], available_cubes: map) -> bool:
