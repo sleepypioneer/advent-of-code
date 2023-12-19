@@ -31,8 +31,10 @@ There are multiple workflows setup to run tests and linting on push requests via
 
 ```bash
 # list all workflows
-act list
+act list --container-architecture linux/amd64 # optional only for mac os
 
 # run a specific workflow
-act -j [JOB_NAME]
+act -j python-lint --container-architecture linux/amd64
+
+act -j python-tests --container-architecture linux/amd64
 ```

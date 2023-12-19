@@ -10,4 +10,4 @@ Distance:   275   1181   1215   1524"""
 
 if __name__ == "__main__":
     main()
-    # Puzzle solution part 1: 0
+    # Puzzle solution part 1: 449820
